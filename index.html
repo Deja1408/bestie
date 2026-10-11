@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            
+background: linear-gradient(
+    135deg,
+    #100817,
+    #281027,
+    #421833,
+    #160d24
+);
+color: #ffe5f3;
+min-height: 100vh;
+margin: 0;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1 {
+    color: #ffb6e6;
+    font-family: cursive;
+    font-size: 38px;
+    text-shadow: 0 0 10px #ff1493,
+                 0 0 25px #ff69b4;
+}
+        p  {
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 0 0 8px #ff69b4;
+    font-weight: 500;
+}     
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+} 
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 5, 20, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.love-box {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    padding: 35px 25px;
+     box-sizing: border-box;
+    text-align: center;
+    background: #190d1d;
+    color: #ffe5f3;
+    border: 2px solid #ff8bc8;
+    border-radius: 22px;
+    box-shadow: 0 0 30px #ff69b4;
+}
+
+.love-box h2 {
+    color: #ff9bd2;
+    font-family: cursive;
+    font-size: 28px;
+}
+
+.love-box p {
+    line-height: 1.8;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    color: #ff9bd2;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close-btn {
+    background: #ff9bd2;
+    color: #321126;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.heart {
+    font-size: 45px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.2); }
+}
+.love-box p {
+    color: #FFB6DC;
+    font-size: 18px;
+    text-shadow: 0 0 8px rgba(255, 105, 180, 0.35);
+}
+
+button {
+    background: #ff69b4;
+    color: white;
+    border: 1px solid #ffb6dc;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff69b4;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 28px rgba(255, 75, 165, 0.55);
+}
+.intro {
+    text-align: center;
+    margin: 50px auto 25px;
+    padding: 25px 15px;
+}
+
+.intro h1 {
+    color: #ffb6e6;
+    font-family: cursive;
+    font-size: 38px;
+    text-shadow: 0 0 10px #ff1493,
+                 0 0 25px #ff69b4;
+}
+
+.intro p  {
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 0 0 8px #ff69b4;
+    font-weight: 500;
+}
+
+.top-heart {
+    color: #ff69b4;
+    font-size: 32px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -50px;
+    color: #ff69b4;
+    font-size: 25px;
+    opacity: 0;
+    text-shadow: 0 0 12px #ff1493;
+    animation: floatUp 8s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 85%;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 95%;
+    animation-delay: 6s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro {
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto 25px;
+}
+
+.intro h1 {
+    overflow-wrap: anywhere;
+}
+
+.love-box {
+    width: calc(100% - 30px);
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .intro {
+        margin-top: 35px;
+        padding: 15px 5px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .intro p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .love-box {
+        padding: 30px 18px;
+    }
+
+    .love-box h2 {
+        font-size: 24px;
+    }
+
+    .love-box p {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+}
+    </style>
+</head>
+
+<body>
+    
+<div class="floating-hearts">
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+</div>
+    <h1>A little reminder for you!</h1>
+
+    <p>You are my love❤️</p>
+    
+<button onclick="showMessage()">Click Me</button>
+
+<div id="lovePopup" class="overlay">
+    <div class="love-box">
+        
+<div class="intro">
+    <div class="top-heart">♡ ✧ ♡</div>
+    <h1>A Little Surprise</h1>
+    <p>Someone has a special message for you...</p>
+</div>
+        <button class="close" onclick="closePopup()">×</button>
+
+        <div class="heart">💗</div>
+
+        <h2>I love you, zainiii ♡</h2>
+
+        <p>
+            Khadijah loves you more than anything in the world.
+            I'm always with you, jaanu. ♡
+        </p>
+
+        <button class="close-btn" onclick="closePopup()">
+            ♡ Close ♡
+        </button>
+    </div>
+</div>
+<script>
+function showMessage() {
+    document.getElementById("lovePopup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("lovePopup").style.display = "none";
+}
+</script>
+</body>
+</html>
